@@ -1,0 +1,1 @@
+ts-node C:\Sources\Home\mcp-weather\src\index.ts

@@ -28,3 +28,7 @@ You should see the following output:
 ```
 Demo MCP Server running on http://localhost:3300/mcp
 ```
+
+## Usage
+
+For using with Continue CLI see `./continue/README.md`

@@ -1,0 +1,16 @@
+name: Project Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: gemma4
+    provider: ollama
+    apiBase: "http://localhost:11434"
+    model: gemma4:e4b
+    defaultCompletionOptions:
+      contextLength: 32000
+
+mcpServers:
+  - name: my-weather-http
+    type: streamable-http
+    url: http://localhost:3300/mcp 

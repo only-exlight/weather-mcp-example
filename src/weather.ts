@@ -5,19 +5,13 @@ export async function getDailyWeather(lat: number, lon: number) {
   const params = {
     latitude: lat,
     longitude: lon,
-    daily: [
-      "temperature_2m_max",
-      "temperature_2m_min",
-      "precipitation_sum",
-      "weathercode",
-    ],
+    daily: ["temperature_2m_max", "temperature_2m_min", "precipitation_sum", "weathercode"],
     timezone: "auto",
   };
 
   const url = "https://api.open-meteo.com/v1/forecast";
   const responses = await fetchWeatherApi(url, params);
 
-  // Open-Meteo может возвращать несколько наборов данных, берём первый
   const weather = responses[0];
   const daily = weather.daily()!;
 
